@@ -1,0 +1,33 @@
+Model "userguide.uml2"
+
+Context: Transaction
+Validation Rule "t1"
+If the type is equal to 'PURCHASE' then exactly two parties are present
+
+Context: Settlement
+Validation Rule "s2"
+discount is greater than or equal to 0 and discount is less than or equal to 1
+
+Context: Settlement
+Validation Rule "d1"
+transaction.date is before settlementDate.date
+
+Context: Settlement
+Validation Rule "c1"
+The settlementCurrency.ccyCode is equal to 'GBP'
+
+Context: Settlement
+Validation Rule "s1"
+netAmount is equal to (grossAmount - tax) * (1 - discount)
+
+Context: Transaction
+Validation Rule "t2"
+In each of the parties the role is one of 'BUYER', 'RECEIVER'
+
+Context: Address
+Validation Rule "a1"
+At most two of the addressComponents have their type equal to AddressComponentType.StreetAddressLine and exactly one of the addressComponents has its type equal to AddressComponentType.StreetAddressPostcode
+
+Context: Transaction
+Validation Rule "zero-sum"
+If the type is equal to 'SWAP' then the sum of settlements.grossAmount is equal to 0

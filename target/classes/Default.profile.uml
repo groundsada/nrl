@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="_ELW_Z9FwEdueuqvB_mKPeg" name="Default" metamodelReference="_ELW_pdFwEdueuqvB_mKPeg">
+  <eAnnotations xmi:id="_ELW_aNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_ELW_adFwEdueuqvB_mKPeg" name="Default" nsURI="http:///schemas/Default/1" nsPrefix="Default">
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_ELW_atFwEdueuqvB_mKPeg" name="ConstraintEvaluationMode">
+        <eAnnotations xmi:id="_ELW_a9FwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_p9FwEdueuqvB_mKPeg"/>
+        <eLiterals xmi:id="_ELW_bNFwEdueuqvB_mKPeg" name="batch"/>
+        <eLiterals xmi:id="_ELW_bdFwEdueuqvB_mKPeg" name="live" value="1"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_ELW_btFwEdueuqvB_mKPeg" name="ConstraintSeverity">
+        <eAnnotations xmi:id="_ELW_b9FwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_qtFwEdueuqvB_mKPeg"/>
+        <eLiterals xmi:id="_ELW_cNFwEdueuqvB_mKPeg" name="error"/>
+        <eLiterals xmi:id="_ELW_cdFwEdueuqvB_mKPeg" name="warning" value="1"/>
+        <eLiterals xmi:id="_ELW_ctFwEdueuqvB_mKPeg" name="info" value="2"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_c9FwEdueuqvB_mKPeg" name="URL">
+        <eAnnotations xmi:id="_ELW_dNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_rtFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_ddFwEdueuqvB_mKPeg" name="base_Comment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_dtFwEdueuqvB_mKPeg" name="Documentation">
+        <eAnnotations xmi:id="_ELW_d9FwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_s9FwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_eNFwEdueuqvB_mKPeg" name="base_Comment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_edFwEdueuqvB_mKPeg" name="Shortcut">
+        <eAnnotations xmi:id="_ELW_etFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_uNFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_e9FwEdueuqvB_mKPeg" name="base_Comment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_fNFwEdueuqvB_mKPeg" name="Perspective">
+        <eAnnotations xmi:id="_ELW_fdFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_vdFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_ftFwEdueuqvB_mKPeg" name="base_Package" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Package"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_f9FwEdueuqvB_mKPeg" name="AbstractMetaConstraint" abstract="true">
+        <eAnnotations xmi:id="_ELW_gNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_wtFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_gdFwEdueuqvB_mKPeg" name="evaluationMode" ordered="false" lowerBound="1" eType="_ELW_atFwEdueuqvB_mKPeg" defaultValueLiteral="batch"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_gtFwEdueuqvB_mKPeg" name="severity" ordered="false" lowerBound="1" eType="_ELW_btFwEdueuqvB_mKPeg" defaultValueLiteral="error"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_g9FwEdueuqvB_mKPeg" name="MetaConstraint" eSuperTypes="_ELW_f9FwEdueuqvB_mKPeg">
+        <eAnnotations xmi:id="_ELW_hNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_x9FwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_hdFwEdueuqvB_mKPeg" name="message" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_htFwEdueuqvB_mKPeg" name="base_Constraint" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Constraint"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_ELW_h9FwEdueuqvB_mKPeg" name="Default_0" nsURI="http:///Default_0.profile.uml2" nsPrefix="Default_0">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_iNFwEdueuqvB_mKPeg" name="Default__Documentation">
+        <eAnnotations xmi:id="_ELW_idFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_s9FwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_itFwEdueuqvB_mKPeg" name="base_Comment">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_i9FwEdueuqvB_mKPeg" name="Default__MetaConstraint" eSuperTypes="_ELW_j9FwEdueuqvB_mKPeg">
+        <eAnnotations xmi:id="_ELW_jNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_x9FwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_jdFwEdueuqvB_mKPeg" name="base_Constraint">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Constraint"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_jtFwEdueuqvB_mKPeg" name="message" defaultValueLiteral="">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_j9FwEdueuqvB_mKPeg" name="Default__AbstractMetaConstraint" abstract="true">
+        <eAnnotations xmi:id="_ELW_kNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_wtFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_kdFwEdueuqvB_mKPeg" name="evaluationMode" lowerBound="1" eType="_ELW_k9FwEdueuqvB_mKPeg" defaultValueLiteral="batch"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ELW_ktFwEdueuqvB_mKPeg" name="severity" lowerBound="1" eType="_ELW_l9FwEdueuqvB_mKPeg" defaultValueLiteral="error"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_ELW_k9FwEdueuqvB_mKPeg" name="Default__ConstraintEvaluationMode">
+        <eAnnotations xmi:id="_ELW_lNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_p9FwEdueuqvB_mKPeg"/>
+        <eLiterals xmi:id="_ELW_ldFwEdueuqvB_mKPeg" name="batch"/>
+        <eLiterals xmi:id="_ELW_ltFwEdueuqvB_mKPeg" name="live" value="1"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_ELW_l9FwEdueuqvB_mKPeg" name="Default__ConstraintSeverity">
+        <eAnnotations xmi:id="_ELW_mNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_qtFwEdueuqvB_mKPeg"/>
+        <eLiterals xmi:id="_ELW_mdFwEdueuqvB_mKPeg" name="error"/>
+        <eLiterals xmi:id="_ELW_mtFwEdueuqvB_mKPeg" name="warning" value="1"/>
+        <eLiterals xmi:id="_ELW_m9FwEdueuqvB_mKPeg" name="info" value="2"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_nNFwEdueuqvB_mKPeg" name="Default__Shortcut">
+        <eAnnotations xmi:id="_ELW_ndFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_uNFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_ntFwEdueuqvB_mKPeg" name="base_Comment">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_n9FwEdueuqvB_mKPeg" name="Default__Perspective">
+        <eAnnotations xmi:id="_ELW_oNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_vdFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_odFwEdueuqvB_mKPeg" name="base_Package">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Package"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ELW_otFwEdueuqvB_mKPeg" name="Default__URL">
+        <eAnnotations xmi:id="_ELW_o9FwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ELW_rtFwEdueuqvB_mKPeg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ELW_pNFwEdueuqvB_mKPeg" name="base_Comment">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.0.0/UML#//Comment"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_ELW_pdFwEdueuqvB_mKPeg" visibility="private">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_ELW_ptFwEdueuqvB_mKPeg" visibility="private">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_ELW_p9FwEdueuqvB_mKPeg" name="ConstraintEvaluationMode">
+    <ownedLiteral xmi:id="_ELW_qNFwEdueuqvB_mKPeg" name="batch"/>
+    <ownedLiteral xmi:id="_ELW_qdFwEdueuqvB_mKPeg" name="live"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_ELW_qtFwEdueuqvB_mKPeg" name="ConstraintSeverity">
+    <ownedLiteral xmi:id="_ELW_q9FwEdueuqvB_mKPeg" name="error"/>
+    <ownedLiteral xmi:id="_ELW_rNFwEdueuqvB_mKPeg" name="warning"/>
+    <ownedLiteral xmi:id="_ELW_rdFwEdueuqvB_mKPeg" name="info"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_rtFwEdueuqvB_mKPeg" name="URL">
+    <ownedAttribute xmi:id="_ELW_r9FwEdueuqvB_mKPeg" name="base_Comment" association="_ELW_sNFwEdueuqvB_mKPeg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ELW_sNFwEdueuqvB_mKPeg" name="Comment_URL" memberEnd="_ELW_sdFwEdueuqvB_mKPeg _ELW_r9FwEdueuqvB_mKPeg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ELW_sdFwEdueuqvB_mKPeg" name="extension_URL" type="_ELW_rtFwEdueuqvB_mKPeg" aggregation="composite" association="_ELW_sNFwEdueuqvB_mKPeg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_stFwEdueuqvB_mKPeg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_s9FwEdueuqvB_mKPeg" name="Documentation">
+    <ownedAttribute xmi:id="_ELW_tNFwEdueuqvB_mKPeg" name="base_Comment" association="_ELW_tdFwEdueuqvB_mKPeg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ELW_tdFwEdueuqvB_mKPeg" name="Comment_Documentation" memberEnd="_ELW_ttFwEdueuqvB_mKPeg _ELW_tNFwEdueuqvB_mKPeg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ELW_ttFwEdueuqvB_mKPeg" name="extension_Documentation" type="_ELW_s9FwEdueuqvB_mKPeg" aggregation="composite" association="_ELW_tdFwEdueuqvB_mKPeg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_t9FwEdueuqvB_mKPeg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_uNFwEdueuqvB_mKPeg" name="Shortcut">
+    <ownedAttribute xmi:id="_ELW_udFwEdueuqvB_mKPeg" name="base_Comment" association="_ELW_utFwEdueuqvB_mKPeg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ELW_utFwEdueuqvB_mKPeg" name="Comment_Shortcut" memberEnd="_ELW_u9FwEdueuqvB_mKPeg _ELW_udFwEdueuqvB_mKPeg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ELW_u9FwEdueuqvB_mKPeg" name="extension_Shortcut" type="_ELW_uNFwEdueuqvB_mKPeg" aggregation="composite" association="_ELW_utFwEdueuqvB_mKPeg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_vNFwEdueuqvB_mKPeg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_vdFwEdueuqvB_mKPeg" name="Perspective">
+    <ownedAttribute xmi:id="_ELW_vtFwEdueuqvB_mKPeg" name="base_Package" association="_ELW_v9FwEdueuqvB_mKPeg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ELW_v9FwEdueuqvB_mKPeg" name="Package_Perspective" memberEnd="_ELW_wNFwEdueuqvB_mKPeg _ELW_vtFwEdueuqvB_mKPeg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ELW_wNFwEdueuqvB_mKPeg" name="extension_Perspective" type="_ELW_vdFwEdueuqvB_mKPeg" aggregation="composite" association="_ELW_v9FwEdueuqvB_mKPeg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_wdFwEdueuqvB_mKPeg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_wtFwEdueuqvB_mKPeg" name="AbstractMetaConstraint" isAbstract="true">
+    <ownedAttribute xmi:id="_ELW_w9FwEdueuqvB_mKPeg" name="evaluationMode" type="_ELW_p9FwEdueuqvB_mKPeg">
+      <defaultValue xmi:type="uml:InstanceValue" xmi:id="_ELW_xNFwEdueuqvB_mKPeg" instance="_ELW_qNFwEdueuqvB_mKPeg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ELW_xdFwEdueuqvB_mKPeg" name="severity" type="_ELW_qtFwEdueuqvB_mKPeg">
+      <defaultValue xmi:type="uml:InstanceValue" xmi:id="_ELW_xtFwEdueuqvB_mKPeg" instance="_ELW_q9FwEdueuqvB_mKPeg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ELW_x9FwEdueuqvB_mKPeg" name="MetaConstraint">
+    <generalization xmi:id="_ELW_yNFwEdueuqvB_mKPeg" general="_ELW_wtFwEdueuqvB_mKPeg"/>
+    <ownedAttribute xmi:id="_ELW_ydFwEdueuqvB_mKPeg" name="message">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_ytFwEdueuqvB_mKPeg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ELW_y9FwEdueuqvB_mKPeg" name="base_Constraint" association="_ELW_zNFwEdueuqvB_mKPeg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Constraint"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ELW_zNFwEdueuqvB_mKPeg" name="Constraint_MetaConstraint" memberEnd="_ELW_zdFwEdueuqvB_mKPeg _ELW_y9FwEdueuqvB_mKPeg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ELW_zdFwEdueuqvB_mKPeg" name="extension_MetaConstraint" type="_ELW_x9FwEdueuqvB_mKPeg" aggregation="composite" association="_ELW_zNFwEdueuqvB_mKPeg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW_ztFwEdueuqvB_mKPeg"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Profile>
